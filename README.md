@@ -1,5 +1,26 @@
-According to the accelerometer data from the mobile phone, it is necessary to classify what kind of activity a person is engaged in: walking, standing, running or climbing stairs.
+### Classification of activities using accelerometer data
 
-Apply SVM algorithms and random forest from the scikit-learn library. To improve the performance of the algorithms, first prepare the dataset and calculate the time domain features. More of these characteristics are described in the article.
+**Description**
+According to the accelerometer data from the mobile phone, it is necessary to classify what kind of activity a person is engaged in: walking, standing, running or climbing stairs. To improve the performance of the algorithms, a dataset is first prepared and time domain characteristics are calculated. You can learn more about these characteristics in the article in the repository.
 
-Compare the performance of different models. Use the classification report method for comparison.
+**Installation**
+Install required dependencies: pandas, scikit-learn.
+Download the data from the accelerometer and execute the code.
+
+**Data preparation**
+Data is loaded from CSV files and then normalized using Min-Max Scaling. The data is then divided into training and test sets.
+
+**Classification models**
+Two classification models were used: support vector (SVC) and random forest.
+
+**SVM Linear**
+The SVC model with a linear kernel was used to classify the activities. The results of the confusion matrix and the classification report are presented.
+
+**Decision Tree**
+The RandomForestClassifier model was used to classify activities. The results of the confusion matrix and the classification report are presented.
+
+**Feature selection**
+Feature selection methods are used to improve results. Three different pipelines were used using SelectKBest to extract the best features for SVM and Decision Tree models.
+
+**Author**
+Zinaida Liashenko
